@@ -13,7 +13,9 @@ _Columns_: stockId,stockName,stockCategory
 Compute the moving average for every stockID with a predefined moving window size.
 
 Window Size : 3
+
 _Columns_: stockId,timeStamp,stockPrice,moving_average 
+
 _Ordered by_: stockId,timeStamp
 
 **Task 2:**
@@ -22,21 +24,26 @@ Join with Projection - Join moving average calculated in Task1 with the stockInf
 Window Size : 3 
 
 Output Data
+
 _Columns_: stockId,timeStamp,stockPrice,moving_average,stockName,stockCategory
 
 **Task 3:**
 Get the projected moving average data for a given stockId.
 
 stockId :103 
-_Columns_:stockId,timeStamp,stockPrice,moving_average,stockName,stockCategory 
+
+_Columns_: stockId,timeStamp,stockPrice,moving_average,stockName,stockCategory 
 
 Output Data
-_Columns_:stockId,timeStamp,stockPrice,moving_average,stockName,stockCategory 
+
+_Columns_: stockId,timeStamp,stockPrice,moving_average,stockName,stockCategory 
 
 **Extensions:**
 
 **Task 4:**
+
 Handle Nulls 
+
 _File_ : src/test/resources/input/stock_prices_dirty/0.csv 
 
 contains null values in stockPrice column.
@@ -51,14 +58,17 @@ _Columns_: stockId,timeStamp,stockPrice
  Load all the above files as spark dataframes and print the count of each of files.
 
  _Task 2 :_ Handle Nulls
+
 File : test/resources/input/stock_prices_dirty/0.csv
 
 contains null values in amount column. Replace those null values with mean of column in spark dataframe.
 
 _Task 3 :_ Add a Sequential Row ID
+
 For a joined dataframe, add an id column which contains sequence numbers from 1 to number of rows
 
 _Task 4 :_ Sales with 5% Discount
+
 Add a column ​discount_amount​ to joined dataframe, which holds 5% discounted amount. 
 
 **WHAT IS MOVING AVERAGE** 
